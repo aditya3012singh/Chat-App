@@ -1,0 +1,45 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+
+model User {
+  id         String    @id @default(uuid())            // will accept explicit id strings when you insert (useful for preserving Mongo ObjectIds)
+  email      String    @unique
+  fullName   String
+  password   String
+  profilePic String?   @default("") 
+  // relations
+  sentMessages     Message[] @relation("sentMessages")
+  receivedMessages Message[] @relation("receivedMessages")
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  @@index([email])
+}
+
+model Message {
+  id         String   @id @default(uuid())
+  sender     User     @relation("sentMessages", fields: [senderId], references: [id])
+  senderId   String
+  receiver   User     @relation("receivedMessages", fields: [receiverId], references: [id])
+  receiverId String
+  text       String?
+  image      String?
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@index([senderId])
+  @@index([receiverId])
+  @@index([senderId, receiverId])
+}
