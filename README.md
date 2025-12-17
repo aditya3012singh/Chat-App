@@ -1,7 +1,7 @@
 
-# BaatCheet - Real-Time Chat Application
+# HelloDost- Real-Time Chat Application
 
-BaatCheet is a modern, real-time chat application designed for seamless communication between users. Built with Node.js, Express, Socket.IO, and MongoDB, it offers a secure and interactive messaging platform with a responsive user interface powered by Tailwind CSS and DaisyUI.
+ HelloDost is a modern, real-time chat application designed for seamless communication between users. Built with Node.js, Express, Socket.IO, and PostgreSQL, it offers a secure and interactive messaging platform with a responsive user interface powered by Tailwind CSS and DaisyUI.
 
 ---
 
@@ -10,7 +10,7 @@ BaatCheet is a modern, real-time chat application designed for seamless communic
 - **Secure Authentication**: JWT-based user authentication and session management.
 - **Cloud Storage**: Integrates Cloudinary for handling media uploads.
 - **Responsive Design**: Optimized for all devices with a clean and modern UI.
-- **Database Management**: Scalable and efficient storage using MongoDB.
+- **Database Management**: Scalable and efficient storage using PstgreSQL.
 
 ---
 
@@ -20,7 +20,7 @@ BaatCheet is a modern, real-time chat application designed for seamless communic
 - **Node.js**
 - **Express.js**
 - **Socket.IO**
-- **MongoDB**
+- **PostgreSQL**
 
 ### Frontend
 - **Tailwind CSS**
@@ -37,7 +37,7 @@ BaatCheet is a modern, real-time chat application designed for seamless communic
 ### Prerequisites
 Make sure you have the following installed:
 - **Node.js** (v14+ recommended)
-- **MongoDB**
+- **PostgreSQL**
 - **Cloudinary Account** (for media uploads)
 
 ---
@@ -46,8 +46,8 @@ Make sure you have the following installed:
 ```bash
 1. Clone the repository:
    
-git clone https://github.com/your-username/BaatCheet.git
-cd BaatCheet
+git clone https://github.com/your-username/Chat-App.git
+cd Chat-App
 
 
 2. Install dependencies:
@@ -59,15 +59,6 @@ npm install
 
 3.Create a .env file in the root directory and add the following variables:
 
-env
-Copy code
-MONGODB_URI=your_mongodb_connection_string
-PORT=your_preferred_port
-JWT_SECRET=your_jwt_secret
-NODE_ENV=development
-CLOUDINARY_CLOUD_NAME=your_cloudinary_cloud_name
-CLOUDINARY_API_KEY=your_cloudinary_api_key
-CLOUDINARY_API_SECRET=your_cloudinary_api_secret
 
 
 4.Start the server:
