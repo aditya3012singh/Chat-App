@@ -1,3 +1,4 @@
+
 # BaatCheet - Real-Time Chat Application
 
 BaatCheet is a modern, real-time chat application designed for seamless communication between users. Built with Node.js, Express, Socket.IO, and MongoDB, it offers a secure and interactive messaging platform with a responsive user interface powered by Tailwind CSS and DaisyUI.
@@ -75,3 +76,5 @@ bash
 Copy code
 npm start
 Open the application in your browser at http://localhost:<PORT>.
+
+
